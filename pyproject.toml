@@ -1,0 +1,7 @@
+# pyproject.toml
+[project]
+name = "learning_program" # プロジェクト名に適宜変更してください
+version = "0.1.0"
+
+[tool.uv]
+requirements = ["./.devcontainer/requirements.txt"] # requirements.txt のパスを指定
