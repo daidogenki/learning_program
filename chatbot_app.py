@@ -29,12 +29,8 @@ try:
     import openai
     LLM_PROVIDER = "openai"
 except ImportError:
-    try:
-        import anthropic
-        LLM_PROVIDER = "anthropic"
-    except ImportError:
-        st.error("Please install either openai or anthropic: uv add openai>=1.30.0")
-        st.stop()
+    st.error("Please install openai: uv add openai>=1.30.0")
+    st.stop()
 
 # Required columns for validation
 REQUIRED_COLUMNS = ['date', 'category', 'units', 'unit_price', 'region', 'sales_channel', 'customer_segment', 'revenue']
